@@ -25,7 +25,7 @@ function App() {
         <Switch>
 
           <Route path="/login">
-           {user ? <Account /> : <Login setUser={setUser}/>} 
+           {user ? <Account setUser={setUser}/> : <Login setUser={setUser}/>} 
           </Route>
 
           <Route path="/createaccount">
@@ -33,7 +33,7 @@ function App() {
           </Route>
 
           <Route path="/account">
-          {user ? <Account /> : <Login setUser={setUser}/>}
+          {user ? <Account setUser={setUser}/> : <Login setUser={setUser}/>}
           </Route>
 
           <Route path="/">
