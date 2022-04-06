@@ -10,6 +10,7 @@ import Account from "../account/account";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     fetch("/hello")
@@ -18,13 +19,14 @@ function App() {
   }, []);
 
 
+
   return (
     <BrowserRouter>
       <div className="App">
         <Switch>
 
           <Route path="/login">
-            <Login />
+           {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>} 
           </Route>
 
           <Route path="/createaccount">
@@ -32,11 +34,11 @@ function App() {
           </Route>
 
           <Route path="/account">
-            <Account />
+          {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>}
           </Route>
 
           <Route path="/">
-            <Home count={count} />
+            <Home count={count} user={user}/>
           </Route>
 
         </Switch>
