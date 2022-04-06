@@ -1,7 +1,7 @@
 import React from "react";
 import PageHeader from '../pageHeader/pageHeader';
 
-function Account({ setUser }) {
+function Account({ setUser, user }) {
     
     function handleLogoutClick() {
         fetch("/logout", {
@@ -15,7 +15,7 @@ function Account({ setUser }) {
     
     return (
         <React.Fragment>
-            <PageHeader />
+            <PageHeader user={user}/>
             <h1>React Account screen</h1>
             <button onClick={handleLogoutClick}>Logout</button>
         </React.Fragment>

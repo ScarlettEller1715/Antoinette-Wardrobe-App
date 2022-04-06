@@ -19,13 +19,14 @@ function App() {
   }, []);
 
 
+
   return (
     <BrowserRouter>
       <div className="App">
         <Switch>
 
           <Route path="/login">
-           {user ? <Account setUser={setUser}/> : <Login setUser={setUser}/>} 
+           {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>} 
           </Route>
 
           <Route path="/createaccount">
@@ -33,11 +34,11 @@ function App() {
           </Route>
 
           <Route path="/account">
-          {user ? <Account setUser={setUser}/> : <Login setUser={setUser}/>}
+          {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>}
           </Route>
 
           <Route path="/">
-            <Home count={count} />
+            <Home count={count} user={user}/>
           </Route>
 
         </Switch>
