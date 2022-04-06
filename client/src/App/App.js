@@ -10,6 +10,7 @@ import Account from "../account/account";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     fetch("/hello")
@@ -24,7 +25,7 @@ function App() {
         <Switch>
 
           <Route path="/login">
-            <Login />
+            <Login setUser={setUser}/>
           </Route>
 
           <Route path="/createaccount">

@@ -1,8 +1,13 @@
 import React from "react";
 
-function Login() {
+function Login({ setUser }) {
     return (
-        <h1>Login screen</h1>
+        <React.Fragment>
+            <h1>Login</h1>
+            <form>
+            </form>
+        </React.Fragment>
+
     )
 }
 
