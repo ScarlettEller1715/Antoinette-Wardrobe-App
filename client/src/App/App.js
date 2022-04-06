@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from '../home/home';
 import Login from '../Login/login';
+import CreateAccount from "../createAccount/createAccount";
+import Account from "../account/account";
 
 
 function App() {
@@ -26,11 +28,11 @@ function App() {
           </Route>
 
           <Route path="/createaccount">
-            <h1>Create Account</h1>
+            <CreateAccount />
           </Route>
 
           <Route path="/account">
-            <h1>Account</h1>
+            <Account />
           </Route>
 
           <Route path="/">

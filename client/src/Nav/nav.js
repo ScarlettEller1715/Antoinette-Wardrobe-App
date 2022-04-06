@@ -1,8 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
     return (
-        <h2>Nav bar goes here</h2>
+        <React.Fragment>
+            <div>
+                <Link to="/">Home</Link>
+                <Link to="/login">Login</Link>
+                <Link to="/createaccount">Create Account</Link>
+                <Link to="/account">Account</Link>
+            </div>
+        </React.Fragment>
     )
 }
 
