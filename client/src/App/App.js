@@ -9,14 +9,7 @@ import Account from "../account/account";
 
 
 function App() {
-  const [count, setCount] = useState(0);
   const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -46,7 +39,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <Home count={count} user={user}/>
+            <Home user={user}/>
           </Route>
 
         </Switch>
