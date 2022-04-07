@@ -31,7 +31,7 @@ function App() {
           </Route>
 
           <Route path="/createaccount">
-            {user ? <Account setUser={setUser} user={user}/> : <CreateAccount />}
+            {user ? <Account setUser={setUser} user={user}/> : <CreateAccount setUser={setUser}/>}
             
           </Route>
 
