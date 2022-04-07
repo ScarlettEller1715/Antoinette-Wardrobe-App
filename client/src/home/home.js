@@ -5,6 +5,7 @@ function Home ({ user }) {
     return (
         <React.Fragment>
             <PageHeader user={user}/>
+            <h1>Homepage</h1>
         </React.Fragment>
         
     )

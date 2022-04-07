@@ -6,6 +6,11 @@ import Home from '../home/home';
 import Login from '../Login/login';
 import CreateAccount from "../createAccount/createAccount";
 import Account from "../account/account";
+import Wardrobe from "../Wardrobe/Wardrobe";
+import Laundry from "../Laundry/laundry";
+import PiecePage from "../Piece Page/piecePage";
+import LogoutWardrobe from "../LogoutWardrobe/logoutWardrobe";
+import LogoutLaundry from "../LogoutLaundry/logoutLaundry";
 
 
 function App() {
@@ -37,6 +42,18 @@ function App() {
 
           <Route path="/account">
           {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>}
+          </Route>
+
+          <Route path="/wardrobe">
+           {user ? <Wardrobe user={user}/> : <LogoutWardrobe user = {user}/>}
+          </Route>
+
+          <Route path="/laundry">
+          {user ? <Laundry user={user}/> : <LogoutLaundry user = {user}/>}
+          </Route>
+
+          <Route path="/piecepage">
+           <PiecePage user={user}/>
           </Route>
 
           <Route path="/">
