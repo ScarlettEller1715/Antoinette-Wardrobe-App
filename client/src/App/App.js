@@ -6,6 +6,8 @@ import Home from '../home/home';
 import Login from '../Login/login';
 import CreateAccount from "../createAccount/createAccount";
 import Account from "../account/account";
+import Wardrobe from "../Wardrobe/Wardrobe";
+import Laundry from "../Laundry/laundry";
 
 
 function App() {
@@ -37,6 +39,14 @@ function App() {
 
           <Route path="/account">
           {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>}
+          </Route>
+
+          <Route path="/wardrobe">
+           <Wardrobe user={user}/>
+          </Route>
+
+          <Route path="/laundry">
+           <Laundry user={user}/>
           </Route>
 
           <Route path="/">
