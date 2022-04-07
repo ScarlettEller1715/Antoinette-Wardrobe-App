@@ -18,7 +18,15 @@ function App() {
       .then((data) => setCount(data.count));
   }, []);
 
-
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          setUser(user)
+        })
+      }
+    })
+  }, []);
 
   return (
     <BrowserRouter>
