@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login({ setUser }) {
     const [username, setUsername] = useState("");
@@ -42,6 +43,7 @@ function Login({ setUser }) {
                 onChange={(e) => setPassword(e.target.value)} />
                 <button type="submit">Login</button>
             </form>
+            <p>Never utilized our services? <Link to="/createaccount">Create an account.</Link></p>
         </React.Fragment>
 
     )
