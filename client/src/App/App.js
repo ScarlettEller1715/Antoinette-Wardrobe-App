@@ -9,16 +9,17 @@ import Account from "../account/account";
 
 
 function App() {
-  const [count, setCount] = useState(0);
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          setUser(user)
+        })
+      }
+    })
   }, []);
-
-
 
   return (
     <BrowserRouter>
@@ -30,7 +31,8 @@ function App() {
           </Route>
 
           <Route path="/createaccount">
-            <CreateAccount />
+            {user ? <Account setUser={setUser} user={user}/> : <CreateAccount setUser={setUser}/>}
+            
           </Route>
 
           <Route path="/account">
@@ -38,7 +40,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <Home count={count} user={user}/>
+            <Home user={user}/>
           </Route>
 
         </Switch>
