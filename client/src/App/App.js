@@ -8,6 +8,7 @@ import CreateAccount from "../createAccount/createAccount";
 import Account from "../account/account";
 import Wardrobe from "../Wardrobe/Wardrobe";
 import Laundry from "../Laundry/laundry";
+import PiecePage from "../Piece Page/piecePage";
 
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
 
           <Route path="/laundry">
            <Laundry user={user}/>
+          </Route>
+
+          <Route path="/piecepage">
+           <PiecePage user={user}/>
           </Route>
 
           <Route path="/">
