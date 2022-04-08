@@ -3,28 +3,32 @@ import { useLocation } from "react-router-dom";
 import PageHeader from "../pageHeader/pageHeader";
 
 function PiecePage({ user }) {
+
+    const images = require.context('../../img', true)
     
     const location = useLocation();
     const pieceId = location.state
 
     const [targetPiece, setTargetPiece] = useState([])
+    const [pageImage, setPageImage] = useState(<img className="pieceImage" src={images('./Loading.jpg')}/>)
 
     useEffect(() => {
         fetch(`/piecedetails/${pieceId.id}`).then((r) => {
             if (r.ok) {
                 r.json().then((r) => {
                     setTargetPiece(r)
+                    setPageImage(<img className="pieceImage" src={images('./' + r.image_filename)}/>)
                 });
             } else {
                 r.json().then((error) => alert(error.errors))
             }
         });
     }, []);
-
+    
     
     const cleanStatus = targetPiece.clean
 
-    return(
+    return (
         <React.Fragment>
             <PageHeader user={user} />
             <h1>{targetPiece.name}</h1>
@@ -35,6 +39,7 @@ function PiecePage({ user }) {
                 <li>{targetPiece.color} is this piece's dominant shade.</li>
                 <li>{cleanStatus ? "Ready to wear!" : "In your laundry bin."}</li>
             </ul>
+            {pageImage}
         </React.Fragment>
     )
 }
