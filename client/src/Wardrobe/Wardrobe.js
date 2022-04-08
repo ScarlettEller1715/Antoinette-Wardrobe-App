@@ -4,12 +4,13 @@ import PieceGallery from "../Piece Gallery/pieceGallery";
 
 
 
-function Wardrobe({ user }) {
+function Wardrobe({ user, wardrobe }) {
+        
     return (
         <React.Fragment>
             <PageHeader user={user}/>
             <h1>Wardrobe Screen</h1>
-            <PieceGallery />
+            <PieceGallery wardrobe={wardrobe}/>
         </React.Fragment>
     )
 }

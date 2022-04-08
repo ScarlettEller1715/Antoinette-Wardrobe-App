@@ -2,7 +2,7 @@ import React from "react";
 import PageHeader from "../pageHeader/pageHeader";
 import PieceGallery from "../Piece Gallery/pieceGallery";
 
-function Laundry({ user }) {
+function Laundry({ user, laundry }) {
     return (
         <React.Fragment>
             <PageHeader user={user}/>

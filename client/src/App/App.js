@@ -16,7 +16,6 @@ import LogoutLaundry from "../LogoutLaundry/logoutLaundry";
 function App() {
   const [user, setUser] = useState(null)
   const [wardrobe, setWardrobe] = useState([])
-  const [laundry, setLaundry] = useState([])
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -55,11 +54,11 @@ function App() {
           </Route>
 
           <Route path="/wardrobe">
-           {user ? <Wardrobe user={user}/> : <LogoutWardrobe user = {user}/>}
+           {user ? <Wardrobe user={user} wardrobe={wardrobe}/> : <LogoutWardrobe user = {user}/>}
           </Route>
 
           <Route path="/laundry">
-          {user ? <Laundry user={user}/> : <LogoutLaundry user = {user}/>}
+          {user ? <Laundry user={user} laundry={laundryOnly}/> : <LogoutLaundry user = {user}/>}
           </Route>
 
           <Route path="/piecepage">

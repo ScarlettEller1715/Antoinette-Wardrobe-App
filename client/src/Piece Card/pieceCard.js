@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function PieceCard() {
-
-    function handlePieceClick() {
-        alert("Hi Scarlett!")
-    }
+function PieceCard({ piece }) {
 
     return (
         <React.Fragment>
-            <Link to="/piecepage">Piece Cards Here</Link>
+            <h3>{piece.name}</h3>
+            <p>{piece.type}</p>
+            <Link to="/piecepage">See details</Link>
         </React.Fragment>
     )
 }
