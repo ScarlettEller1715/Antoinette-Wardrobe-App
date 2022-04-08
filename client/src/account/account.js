@@ -16,7 +16,10 @@ function Account({ setUser, user }) {
     return (
         <React.Fragment>
             <PageHeader user={user}/>
-            <h1>React Account screen</h1>
+            <h1>The account details of {user.name}</h1>
+            <p>Username: {user.username}</p>
+            <p>Email on file: {user.email}</p>
+
             <button onClick={handleLogoutClick}>Logout</button>
         </React.Fragment>
     )
