@@ -15,17 +15,26 @@ import LogoutLaundry from "../LogoutLaundry/logoutLaundry";
 
 function App() {
   const [user, setUser] = useState(null)
+  const [wardrobe, setWardrobe] = useState([])
+  const [laundry, setLaundry] = useState([])
 
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => {
           setUser(user)
-          console.log(user.pieces)
+          setWardrobe(user.pieces)
         })
       }
     })
   }, []);
+
+  const laundryOnly = wardrobe.filter((piece) => {
+    if (piece.clean === false) {
+      return piece
+    }
+  })
+
 
   return (
     <BrowserRouter>
