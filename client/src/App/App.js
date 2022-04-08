@@ -21,6 +21,7 @@ function App() {
       if (r.ok) {
         r.json().then((user) => {
           setUser(user)
+          console.log(user.pieces)
         })
       }
     })
