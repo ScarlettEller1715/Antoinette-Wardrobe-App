@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_07_210547) do
+ActiveRecord::Schema.define(version: 2022_04_08_144042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_04_07_210547) do
     t.bigint "user_id", null: false
     t.string "name"
     t.string "image_filename"
-    t.string "type"
+    t.string "piece_type"
     t.string "weather"
     t.string "formality"
     t.string "color"
