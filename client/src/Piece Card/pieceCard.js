@@ -12,7 +12,11 @@ function PieceCard({ piece }) {
                 <h3>{piece.name}</h3>
                 <img className="pieceImage" src={images('./' + piece.image_filename)}/>
                 <p>Wear on {piece.weather.toLowerCase()} days</p>
-                <Link to="/piecepage">See details</Link>
+                <Link to={{
+                    pathname: "/piecepage", 
+                    state: { id: piece.id }
+                }}
+                >See details</Link>
             </div>
         </React.Fragment>
     )

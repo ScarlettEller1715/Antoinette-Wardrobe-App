@@ -2,8 +2,6 @@ import React from "react";
 import PieceCard from "../Piece Card/pieceCard";
 
 function PieceGallery({ clothes }) {
-
-    console.log(clothes)
     
     const renderedWardrobe = clothes.map((piece) => {
         return <PieceCard piece={piece}/>

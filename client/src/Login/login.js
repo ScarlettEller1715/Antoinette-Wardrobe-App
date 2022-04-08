@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-function Login({ setUser }) {
+function Login({ setUser, setWardrobe }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    const history = useHistory();
     
     function handleSubmit(e) {
         e.preventDefault()
@@ -17,6 +20,8 @@ function Login({ setUser }) {
             if (r.ok) {
                 r.json().then((user) => {
                     setUser(user)
+                    setWardrobe(user.pieces)
+                    history.push("/wardrobe");
                 });
             } else {
                 r.json().then((error) => alert(error.errors));
