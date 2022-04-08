@@ -16,8 +16,8 @@ c5 = Piece.create(user_id: u1.id, name: "SJ Open Front Blouse", image_filename: 
 c6 = Piece.create(user_id: u1.id, name: "Stripped Blue Pants", image_filename: "Stripped_Blue_Business_Pants.jpg", piece_type: "Bottom", weather: "Cool", formality: "Business", color: "Blue", clean: true)
 c7 = Piece.create(user_id: u1.id, name: "Uniqlo Basic White Shirt", image_filename: "Uniqlo_Shirt.jpg", piece_type: "Top", weather: "Warm", formality: "Business", color: "White", clean: true)
 c8 = Piece.create(user_id: u1.id, name: "Checkered Pants", image_filename: "Uniqlo-Checkered-Pants.jpg", piece_type: "Bottom", weather: "Warm", formality: "Business", color: "Grey", clean: true)
-c9 = Piece.create(user_id: u1.id, name: "Green 40's-style Overalls", image_filename: "UV_Green_40s-Overalls.jpg", piece_type: "Bottom", weather: "Warm", formality: "Casual", color: "Green", clean: true)
-c10 = Piece.create(user_id: u1.id, name: "Vintage 50's Blouse", image_filename: "Vintage_50s_blouse.jpg", piece_type: "Top", weather: "Hot", formality: "Casual", color: "Blue", clean: true)
+c9 = Piece.create(user_id: u1.id, name: "Green 40's-style Overalls", image_filename: "UV_Green_40s-Overalls.jpg", piece_type: "Bottom", weather: "Warm", formality: "Casual", color: "Green", clean: false)
+c10 = Piece.create(user_id: u1.id, name: "Vintage 50's Blouse", image_filename: "Vintage_50s_blouse.jpg", piece_type: "Top", weather: "Hot", formality: "Casual", color: "Blue", clean: false)
 
 
 puts "Seeding complete!"
