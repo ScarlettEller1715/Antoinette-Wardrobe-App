@@ -1,9 +1,11 @@
 import React from "react";
 import PieceCard from "../Piece Card/pieceCard";
 
-function PieceGallery({ wardrobe }) {
+function PieceGallery({ clothes }) {
+
+    console.log(clothes)
     
-    const renderedWardrobe = wardrobe.map((piece) => {
+    const renderedWardrobe = clothes.map((piece) => {
         return <PieceCard piece={piece}/>
     })
 

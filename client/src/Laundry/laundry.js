@@ -2,12 +2,14 @@ import React from "react";
 import PageHeader from "../pageHeader/pageHeader";
 import PieceGallery from "../Piece Gallery/pieceGallery";
 
-function Laundry({ user, laundry }) {
+function Laundry({ user, clothes }) {
+
+
     return (
         <React.Fragment>
             <PageHeader user={user}/>
             <h1>Laundry Page</h1>
-            <PieceGallery />
+            {<PieceGallery clothes={clothes}/>}
         </React.Fragment>
     )
 }

@@ -54,11 +54,11 @@ function App() {
           </Route>
 
           <Route path="/wardrobe">
-           {user ? <Wardrobe user={user} wardrobe={wardrobe}/> : <LogoutWardrobe user = {user}/>}
+           {user ? <Wardrobe user={user} clothes={wardrobe}/> : <LogoutWardrobe user = {user}/>}
           </Route>
 
           <Route path="/laundry">
-          {user ? <Laundry user={user} laundry={laundryOnly}/> : <LogoutLaundry user = {user}/>}
+          {user ? <Laundry user={user} clothes={laundryOnly}/> : <LogoutLaundry user = {user}/>}
           </Route>
 
           <Route path="/piecepage">
