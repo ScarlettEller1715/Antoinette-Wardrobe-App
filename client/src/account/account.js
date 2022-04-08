@@ -1,7 +1,11 @@
 import React from "react";
 import PageHeader from '../pageHeader/pageHeader';
+import { useHistory } from "react-router-dom";
+
 
 function Account({ setUser, user }) {
+
+    const history = useHistory();
     
     function handleLogoutClick() {
         fetch("/logout", {
@@ -9,6 +13,7 @@ function Account({ setUser, user }) {
         }).then((res) => {
             if (res.ok) {
                 setUser(null)
+                history.push("/")
             }
         })
     }
