@@ -6,7 +6,7 @@ function PieceCard({ piece }) {
     return (
         <React.Fragment>
             <h3>{piece.name}</h3>
-            <p>{piece.type}</p>
+            <p>Wear on {piece.weather.toLowerCase()} days</p>
             <Link to="/piecepage">See details</Link>
         </React.Fragment>
     )
