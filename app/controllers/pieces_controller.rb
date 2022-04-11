@@ -6,7 +6,8 @@ class PiecesController < ApplicationController
     end
 
     def create
-        piece = @current_user.pieces.create!(:pieces_params)
+        
+        piece = Piece.create!(user_id: session[:user_id], name: params[:name], image_filename: params[:image_filename], piece_type: params[:piece_type], weather: params[:weather], formality: params[:formality], color: params[:color], clean: params[:clean])
         render json: piece, status: :created
     end
 

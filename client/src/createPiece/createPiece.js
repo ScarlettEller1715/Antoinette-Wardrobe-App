@@ -10,12 +10,36 @@ function CreatePiece({ user }) {
     const [formality, setFormality] = useState("")
     const [color, setColor] = useState("")
     
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("/createpiece", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name,
+                image_filename,
+                piece_type,
+                weather,
+                formality,
+                color,
+                clean: true
+            }),
+        }).then((r) => { 
+            if (r.ok) {
+                r.json().then((response) => {console.log(response)})
+            } else {
+                r.json().then((e) => alert(e.errors))
+            }
+        })
+    }
     
     return (
         <React.Fragment>
             <PageHeader user={user} />
             <h1>Add a new piece to your wardrobe!</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h3>What do you call this piece?</h3>
                 <input placeholder="Name"
                 type="text"
@@ -73,6 +97,7 @@ function CreatePiece({ user }) {
                     <option value="Purple">Purple</option>
                     <option value="Red">Red</option>
                 </select>
+                <button type="submit">Add to Wardrobe!</button>
             </form>
         </React.Fragment>
     )
