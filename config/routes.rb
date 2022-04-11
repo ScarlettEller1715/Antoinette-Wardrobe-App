@@ -4,14 +4,18 @@ Rails.application.routes.draw do
 
 #Users
 get '/me', to: 'users#show'
+
 post '/signup', to: 'users#create'
 
 #Sessions
 post '/login', to: 'sessions#create'
+
 delete '/logout', to: 'sessions#destroy'
 
 #Pieces
 get '/piecedetails/:id', to: 'pieces#show'
+
+post '/createpiece', to: 'pieces#create'
 
 
 get '*path',

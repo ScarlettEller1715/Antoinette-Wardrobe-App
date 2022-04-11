@@ -11,6 +11,7 @@ import Laundry from "../Laundry/laundry";
 import PiecePage from "../Piece Page/piecePage";
 import LogoutWardrobe from "../LogoutWardrobe/logoutWardrobe";
 import LogoutLaundry from "../LogoutLaundry/logoutLaundry";
+import CreatePiece from "../createPiece/createPiece";
 
 
 function App() {
@@ -63,6 +64,10 @@ function App() {
 
           <Route path="/piecepage">
            <PiecePage user={user}/>
+          </Route>
+
+          <Route path="/createpiece">
+           <CreatePiece user={user}/>
           </Route>
 
           <Route path="/">
