@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import PageHeader from "../pageHeader/pageHeader";
 
-function PiecePage({ user }) {
+function PiecePage({ user, donatePiece }) {
+
+    const history = useHistory();
     
     const location = useLocation();
     const pieceId = location.state
@@ -26,6 +28,15 @@ function PiecePage({ user }) {
     
     const cleanStatus = targetPiece.clean
 
+    function handleDelete() {
+        fetch(`/donate/${targetPiece.id}`, {
+            method: "DELETE",
+        }).then(() => {
+            donatePiece(targetPiece.id)
+            history.push('/wardrobe')
+        })
+    }
+
     return (
         <React.Fragment>
             <PageHeader user={user} />
@@ -38,6 +49,7 @@ function PiecePage({ user }) {
                 <li>{cleanStatus ? "Ready to wear!" : "In your laundry bin."}</li>
             </ul>
             {pageImage}
+            <button onClick={handleDelete}>Remove from Wardrobe</button>
         </React.Fragment>
     )
 }

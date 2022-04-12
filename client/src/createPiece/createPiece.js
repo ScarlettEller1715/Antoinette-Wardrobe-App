@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
+import { useHistory } from "react-router-dom";
 import PageHeader from "../pageHeader/pageHeader";
 
-function CreatePiece({ user }) {
+function CreatePiece({ user, addNewPiece }) {
+
+    const history = useHistory();
     
     const [name, setName] = useState("")
     const [clothing_Image, setClothing_Image] = useState("")
@@ -26,13 +29,13 @@ function CreatePiece({ user }) {
          console.log(formData.getAll('clothing_image'))
          fetch("/createpiece", {
              method: "POST",
-            //  headers: {
-            //      "Content-Type": "application/json",
-            //  },
              body: formData,
          }).then((r) => { 
              if (r.ok) {
-                 r.json().then((response) => {console.log(response)})
+                 r.json().then((response) => {
+                     addNewPiece(response)
+                     history.push("/wardrobe")
+                })
              } else {
                  r.json().then((e) => alert(e.errors))
              }
@@ -85,6 +88,7 @@ function CreatePiece({ user }) {
                 <h3>What is the dominant color of this piece?</h3>
                 <select onChange={(e) => setColor(e.target.value)}>
                     <option value="">Choose Color</option>
+                    <option value="White">White</option>
                     <option value="Beige">Beige</option>
                     <option value="Grey">Grey</option>
                     <option value="Light Blue">Light Blue</option>
