@@ -6,7 +6,8 @@ class PiecesController < ApplicationController
     end
 
     def create
-        piece = Piece.create!(user_id: session[:user_id], name: params[:name], image_filename: params[:image_filename], piece_type: params[:piece_type], weather: params[:weather], formality: params[:formality], color: params[:color], clean: params[:clean])
+        byebug
+        piece = @current_user.pieces.create!(pieces_params)
         render json: piece, status: :created
     end
 
@@ -18,6 +19,6 @@ class PiecesController < ApplicationController
 
     private
     def pieces_params
-        params.permit(:name, :image_filename, :piece_type, :weather, :formality, :color, :clean)
+        params.permit(:name, :clothing_image, :piece_type, :weather, :formality, :color, :clean)
     end
 end

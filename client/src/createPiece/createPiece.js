@@ -1,38 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PageHeader from "../pageHeader/pageHeader";
 
 function CreatePiece({ user }) {
     
     const [name, setName] = useState("")
-    const [image_filename, setImage_Filename] = useState("")
+    const [clothing_Image, setClothing_Image] = useState("")
     const [piece_type, setPiece_Type] = useState("")
     const [weather, setWeather] = useState("")
     const [formality, setFormality] = useState("")
     const [color, setColor] = useState("")
+    const imageUpload = useRef()
     
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("/createpiece", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                name,
-                image_filename,
-                piece_type,
-                weather,
-                formality,
-                color,
-                clean: true
-            }),
-        }).then((r) => { 
-            if (r.ok) {
-                r.json().then((response) => {console.log(response)})
-            } else {
-                r.json().then((e) => alert(e.errors))
-            }
-        })
+
+         const formData = new FormData()
+         formData.append('name', name)
+         formData.append('clothing_image', clothing_Image)
+         formData.append('piece_type', piece_type)
+         formData.append('weather', weather)
+         formData.append('formality', formality)
+         formData.append('color', color)
+         formData.append('clean', true)
+
+         console.log(formData.getAll('clothing_image'))
+         fetch("/createpiece", {
+             method: "POST",
+            //  headers: {
+            //      "Content-Type": "application/json",
+            //  },
+             body: formData,
+         }).then((r) => { 
+             if (r.ok) {
+                 r.json().then((response) => {console.log(response)})
+             } else {
+                 r.json().then((e) => alert(e.errors))
+             }
+         })
     }
     
     return (
@@ -49,12 +53,9 @@ function CreatePiece({ user }) {
                 onChange={(e) => setName(e.target.value)}
                 />
                 <h3>What does this piece look like?</h3>
-                <input placeholder="Image URL"
-                type="text"
-                autoComplete="off"
-                value={image_filename}
-                id="image_filename"
-                onChange={(e) => setImage_Filename(e.target.value)}
+                <input type="file"
+                ref={imageUpload}
+                onChange={(e) => setClothing_Image(e.target.files[0])}
                 />
                 <h3>What type of clothing is this?</h3>
                 <select onChange={(e) => setPiece_Type(e.target.value)}>
