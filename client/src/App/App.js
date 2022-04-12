@@ -42,6 +42,17 @@ function App() {
     ])
   }
 
+  function donatePiece(id) {
+    const updatedData = wardrobe.filter((piece) => {
+      if (piece.id === id) {
+        return null
+      } else {
+        return piece
+      }
+    })
+    setWardrobe(updatedData)
+  }
+
 
   return (
     <BrowserRouter>
@@ -70,7 +81,7 @@ function App() {
           </Route>
 
           <Route path="/piecepage">
-           <PiecePage user={user}/>
+           <PiecePage user={user} donatePiece={donatePiece}/>
           </Route>
 
           <Route path="/createpiece">

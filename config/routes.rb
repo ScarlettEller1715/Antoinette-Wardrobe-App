@@ -17,6 +17,8 @@ get '/piecedetails/:id', to: 'pieces#show'
 
 post '/createpiece', to: 'pieces#create'
 
+delete '/donate/:id', to: 'pieces#destroy'
+
 
 get '*path',
       to: 'fallback#index',
