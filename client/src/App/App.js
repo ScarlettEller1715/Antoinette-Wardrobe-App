@@ -35,6 +35,13 @@ function App() {
     }
   })
 
+  function addNewPiece(newPiece) {
+    setWardrobe([
+      ...wardrobe,
+      newPiece
+    ])
+  }
+
 
   return (
     <BrowserRouter>
@@ -67,7 +74,7 @@ function App() {
           </Route>
 
           <Route path="/createpiece">
-           <CreatePiece user={user}/>
+           <CreatePiece user={user} addNewPiece={addNewPiece}/>
           </Route>
 
           <Route path="/">

@@ -6,7 +6,6 @@ class PiecesController < ApplicationController
     end
 
     def create
-        byebug
         piece = @current_user.pieces.create!(pieces_params)
         render json: piece, status: :created
     end

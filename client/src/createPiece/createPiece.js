@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import PageHeader from "../pageHeader/pageHeader";
 
-function CreatePiece({ user }) {
+function CreatePiece({ user, addNewPiece }) {
     
     const [name, setName] = useState("")
     const [clothing_Image, setClothing_Image] = useState("")
@@ -26,13 +26,10 @@ function CreatePiece({ user }) {
          console.log(formData.getAll('clothing_image'))
          fetch("/createpiece", {
              method: "POST",
-            //  headers: {
-            //      "Content-Type": "application/json",
-            //  },
              body: formData,
          }).then((r) => { 
              if (r.ok) {
-                 r.json().then((response) => {console.log(response)})
+                 r.json().then((response) => {addNewPiece(response)})
              } else {
                  r.json().then((e) => alert(e.errors))
              }
