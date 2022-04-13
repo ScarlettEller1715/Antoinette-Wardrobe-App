@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "../pageHeader/pageHeader";
 
 function LogoutWardrobe({ user }) {
+    
     return (
         <React.Fragment>
             <PageHeader user={user} />

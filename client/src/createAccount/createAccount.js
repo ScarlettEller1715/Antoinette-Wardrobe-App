@@ -72,7 +72,6 @@ function CreateAccount({ setUser }) {
                 />
                 <button type="submit">Join us!</button>
             </form>
-
         </React.Fragment>
     )
 }

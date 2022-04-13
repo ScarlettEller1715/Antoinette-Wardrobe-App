@@ -4,7 +4,6 @@ import PieceGallery from "../Piece Gallery/pieceGallery";
 
 function Laundry({ user, clothes, laundryUpdate }) {
 
-
     return (
         <React.Fragment>
             <PageHeader user={user}/>
