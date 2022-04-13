@@ -26,7 +26,6 @@ function CreatePiece({ user, addNewPiece }) {
          formData.append('color', color)
          formData.append('clean', true)
 
-         console.log(formData.getAll('clothing_image'))
          fetch("/createpiece", {
              method: "POST",
              body: formData,
