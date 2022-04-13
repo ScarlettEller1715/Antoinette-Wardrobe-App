@@ -8,7 +8,7 @@ function PieceCard({ piece }) {
     const [updatedClean, setUpdatedClean] = useState(!piece.clean);
 
     function handleLaundry() {
-        fetch(`/laundry/:id`, {
+        fetch(`/laundry/${piece.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -37,6 +37,7 @@ function PieceCard({ piece }) {
                     state: { id: piece.id }
                 }}
                 >See details</Link>
+                <button onClick={handleLaundry}>Laundry</button>
             </div>
         </React.Fragment>
     )
