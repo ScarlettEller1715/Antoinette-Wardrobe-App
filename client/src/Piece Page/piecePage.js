@@ -25,7 +25,6 @@ function PiecePage({ user, donatePiece }) {
         });
     }, []);
     
-    
     const cleanStatus = targetPiece.clean
 
     function handleDelete() {

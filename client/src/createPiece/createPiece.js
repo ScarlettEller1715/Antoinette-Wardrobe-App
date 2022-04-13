@@ -15,6 +15,7 @@ function CreatePiece({ user, addNewPiece }) {
     const imageUpload = useRef()
     
     function handleSubmit(e) {
+        
         e.preventDefault();
 
          const formData = new FormData()

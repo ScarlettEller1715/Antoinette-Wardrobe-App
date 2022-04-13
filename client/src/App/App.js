@@ -64,7 +64,6 @@ function App() {
     setWardrobe(updatedPieces)
   }
 
-
   return (
     <BrowserRouter>
       <div className="App">

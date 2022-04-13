@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 function Nav({ user }) {
 
     const createAccountOrUsername = (user ? <p>Welcome {user.name}!</p> : <Link to="/createaccount">Create Account</Link>)
+
+
     const logInOrAccount = (user ? <Link className="Link" to="/account">Your Account</Link> : <Link className="Link" to="/login">Log In</Link>)
 
     return (
