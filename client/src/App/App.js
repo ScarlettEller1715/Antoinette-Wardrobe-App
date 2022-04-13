@@ -53,6 +53,17 @@ function App() {
     setWardrobe(updatedData)
   }
 
+  function laundryUpdate(updatedPiece) {
+    const updatedPieces = wardrobe.map((piece) => {
+      if (piece.id === updatedPiece.id) {
+        return updatedPiece
+      } else {
+        return piece
+      }
+    });
+    setWardrobe(updatedPieces)
+  }
+
 
   return (
     <BrowserRouter>
@@ -73,11 +84,11 @@ function App() {
           </Route>
 
           <Route path="/wardrobe">
-           {user ? <Wardrobe user={user} clothes={wardrobe}/> : <LogoutWardrobe user = {user}/>}
+           {user ? <Wardrobe user={user} clothes={wardrobe} laundryUpdate={laundryUpdate}/> : <LogoutWardrobe user = {user}/>}
           </Route>
 
           <Route path="/laundry">
-          {user ? <Laundry user={user} clothes={laundryOnly}/> : <LogoutLaundry user = {user}/>}
+          {user ? <Laundry user={user} clothes={laundryOnly} laundryUpdate={laundryUpdate}/> : <LogoutLaundry user = {user}/>}
           </Route>
 
           <Route path="/piecepage">

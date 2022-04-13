@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import './pieceCard.css'
 
-function PieceCard({ piece }) {
+function PieceCard({ piece, laundryUpdate }) {
 
     const [updatedClean, setUpdatedClean] = useState(!piece.clean);
 
@@ -19,7 +19,7 @@ function PieceCard({ piece }) {
         }).then((r) => {
             if (r.ok) {
                 r.json().then((piece) => {
-                    console.log(piece)
+                    laundryUpdate(piece)
                 })
             } else {
                 r.json().then((e) => alert(e.errors))
