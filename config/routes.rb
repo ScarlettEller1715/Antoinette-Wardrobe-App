@@ -17,6 +17,8 @@ get '/piecedetails/:id', to: 'pieces#show'
 
 post '/createpiece', to: 'pieces#create'
 
+patch '/laundry/:id', to: 'pieces#laundry'
+
 delete '/donate/:id', to: 'pieces#destroy'
 
 
