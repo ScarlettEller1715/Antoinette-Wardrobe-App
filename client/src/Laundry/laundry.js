@@ -9,7 +9,7 @@ function Laundry({ user, clothes, laundryUpdate }) {
         <React.Fragment>
             <PageHeader user={user}/>
             <h1>Laundry Page</h1>
-            {<PieceGallery clothes={clothes} laundryUpdate={laundryUpdate}/>}
+            {<PieceGallery clothes={clothes} laundryUpdate={laundryUpdate} page={false}/>}
         </React.Fragment>
     )
 }

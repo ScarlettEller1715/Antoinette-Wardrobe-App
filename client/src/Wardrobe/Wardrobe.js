@@ -10,7 +10,7 @@ function Wardrobe({ user, clothes, laundryUpdate }) {
         <React.Fragment>
             <PageHeader user={user}/>
             <h1>Wardrobe Screen</h1>
-            <PieceGallery clothes={clothes} laundryUpdate={laundryUpdate}/>
+            <PieceGallery clothes={clothes} laundryUpdate={laundryUpdate} page={true}/>
         </React.Fragment>
     )
 }
