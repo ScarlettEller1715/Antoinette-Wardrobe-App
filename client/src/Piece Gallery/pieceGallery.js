@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PieceCard from "../Piece Card/pieceCard";
 
-function PieceGallery({ clothes, laundryUpdate }) {
+function PieceGallery({ clothes, laundryUpdate, page }) {
 
     const [formalityFilter, setFormalityFilter] = useState("")
     const [weatherFilter, setWeatherFilter] = useState("")
@@ -94,10 +94,10 @@ function PieceGallery({ clothes, laundryUpdate }) {
                     <option value="Purple">Purple</option>
                     <option value="Red">Red</option>
                 </select>
-                <select onChange={(e) => setLaundryFilter(e.target.value)}>
+                {page ? <select onChange={(e) => setLaundryFilter(e.target.value)}>
                     <option value="">See Full Wardrobe</option>
                     <option value="true">See Clean Clothes Only</option>
-                </select>
+                </select> : null}
             </div>
             <Link to="/createpiece">Add a new piece!</Link>
             {renderedWardrobe}
