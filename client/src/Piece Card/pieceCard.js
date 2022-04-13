@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import './pieceCard.css'
 
-function PieceCard({ piece }) {
-    // const images = require.context('../../img', true)
+function PieceCard({ piece, laundryUpdate }) {
 
-    console.log(piece.clothing_image.url)
+    const [updatedClean, setUpdatedClean] = useState(!piece.clean);
+
+    function handleLaundry() {
+        fetch(`/laundry/${piece.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                clean: updatedClean
+            }),
+        }).then((r) => {
+            if (r.ok) {
+                r.json().then((piece) => {
+                    laundryUpdate(piece)
+                })
+            } else {
+                r.json().then((e) => alert(e.errors))
+            }})
+    }
 
     return (
         <React.Fragment>
@@ -19,6 +37,7 @@ function PieceCard({ piece }) {
                     state: { id: piece.id }
                 }}
                 >See details</Link>
+                <button onClick={handleLaundry}>Laundry</button>
             </div>
         </React.Fragment>
     )

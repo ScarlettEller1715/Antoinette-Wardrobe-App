@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PieceCard from "../Piece Card/pieceCard";
 
-function PieceGallery({ clothes }) {
+function PieceGallery({ clothes, laundryUpdate }) {
     
     const renderedWardrobe = clothes.map((piece) => {
-        return <PieceCard piece={piece}/>
+        return <PieceCard piece={piece} laundryUpdate={laundryUpdate}/>
     })
 
     return (
