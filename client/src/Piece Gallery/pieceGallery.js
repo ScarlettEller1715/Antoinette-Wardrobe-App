@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PieceCard from "../Piece Card/pieceCard";
 
+import "../Piece Gallery/pieceGallery.css"
+
 function PieceGallery({ clothes, laundryUpdate, page }) {
 
     const [formalityFilter, setFormalityFilter] = useState("")
