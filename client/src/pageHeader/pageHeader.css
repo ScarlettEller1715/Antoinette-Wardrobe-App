@@ -1,0 +1,26 @@
+.headerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.titleText {
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 8vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-family: 'Parisienne';
+    font-weight: 140
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 8vw;
+    height: 8vw;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
