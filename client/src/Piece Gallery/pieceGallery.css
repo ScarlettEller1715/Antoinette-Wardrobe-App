@@ -1,3 +1,29 @@
 .filters {
+    display: flex;
+    justify-content: center;
     padding-top: 3vw;
+    
+}
+
+.filters p{
+    padding-right: 1vw;
+    font-family: "Alata";
+    font-size: 1.8vw;
+    margin-bottom: 0;
+    margin-top: 0.1vw;
+}
+
+.filters select{
+    height: 3vw;
+    width: 12vw;
+    border: .15vw solid black;
+    padding: .5vw 1.5vw .5vw .5vw; /*affects internal size */
+    display: flex;
+    background-color: white;
+
+    font-size: .9vw;
+    font-weight: bold;
+
+    cursor: pointer;
+    appearance: none;
 }
