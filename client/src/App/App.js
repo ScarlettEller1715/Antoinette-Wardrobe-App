@@ -70,16 +70,16 @@ function App() {
         <Switch>
 
           <Route path="/login">
-           {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser} setWardrobe={setWardrobe}/>} 
+           {user ? <Account setWardrobe={setWardrobe} setUser={setUser} user={user}/> : <Login setUser={setUser} setWardrobe={setWardrobe}/>} 
           </Route>
 
           <Route path="/createaccount">
-            {user ? <Account setUser={setUser} user={user}/> : <CreateAccount setUser={setUser}/>}
+            {user ? <Account setWardrobe={setWardrobe} setUser={setUser} user={user}/> : <CreateAccount setUser={setUser}/>}
             
           </Route>
 
           <Route path="/account">
-          {user ? <Account setUser={setUser} user={user}/> : <Login setUser={setUser}/>}
+          {user ? <Account setWardrobe={setWardrobe} setUser={setUser} user={user}/> : <Login setUser={setUser}/>}
           </Route>
 
           <Route path="/wardrobe">

@@ -3,7 +3,7 @@ import PageHeader from '../pageHeader/pageHeader';
 import { useHistory } from "react-router-dom";
 
 
-function Account({ setUser, user }) {
+function Account({ setUser, user, setWardrobe }) {
 
     const history = useHistory();
     
@@ -13,6 +13,7 @@ function Account({ setUser, user }) {
         }).then((res) => {
             if (res.ok) {
                 setUser(null)
+                setWardrobe([])
                 history.push("/")
             }
         })
