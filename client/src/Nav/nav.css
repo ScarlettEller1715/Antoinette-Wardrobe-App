@@ -21,6 +21,8 @@
     font-weight: 200;
     text-decoration: none;
     color: white;
+
+    padding: 1.2vw;
 }.navLink:hover {
     transform: scale(1.2);
     font-weight: 180%;
