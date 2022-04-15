@@ -1,3 +1,10 @@
+.fullClothesDisplay {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .filters {
     display: flex;
     justify-content: center;
@@ -37,7 +44,7 @@
     height: 2.5vw;
     width: 11.7vw;
     border: .25vw solid black;
-    padding: .5vw 1.5vw .5vw .5vw; 
+    padding: .5vw .5vw .5vw .5vw; 
     margin-left: 3vw;
     display: flex;
     align-items: center;
@@ -51,11 +58,21 @@
     color: black;
 
     cursor: pointer;
-    appearance: none;
 }.createButton:hover{
     background-color: gold;
 
     text-decoration: underline;
     transform: translate3d(-0vw, -.3vw, 0px);
     transition: all .3s;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0%;
+    padding-right: 0%;
+
+    width: 90vw;
 }

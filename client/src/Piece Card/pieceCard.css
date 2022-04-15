@@ -1,9 +1,71 @@
 .pieceCard {
-    outline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    outline: solid silver;
+
+    width: 20vw;
+    height: 25vw;
+    margin: 1vw;
+}.pieceCard:hover {
+    outline: solid black;
+
+    transform: translate3d(-.1vw, -.3vw, 0px);
+    transform: scale(1.06);
+    transition: all .1s;
+    box-shadow: .4vw .4vw gold;
+
 }
 
 .pieceImage {
-    height: 20vw;
-    width: 16vw;
+    display: flex;
+    height: 17vw;
+    width: 14vw;
+
+    margin-top: 1vw;
+
+    outline: solid silver;
 }
 
+.cardButtons {
+    display: flex;
+    margin-top: .5vw;
+
+}
+
+.detailLink {
+    display: flex;
+
+    color: black;
+    font-family: "Alata";
+    font-size: 1.5vw;
+    text-decoration: none;
+
+    padding-top: 1vw;
+}.detailLink:hover{
+    text-decoration: underline;
+}
+
+.cardButtons p {
+    display: flex;
+
+    color: grey;
+
+    padding-right: 1.5vw;
+
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.laundryIcon{
+    display: flex;
+    width: 2.5vw;
+    height: 2.5vw;
+    padding-top: .3vw;
+}.laundryIcon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all .1s;
+}
