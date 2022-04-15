@@ -23,6 +23,7 @@ function PieceCard({ piece, laundryUpdate }) {
             if (r.ok) {
                 r.json().then((piece) => {
                     laundryUpdate(piece)
+                    setUpdatedClean(!piece.clean)
                 })
             } else {
                 r.json().then((e) => alert(e.errors))
