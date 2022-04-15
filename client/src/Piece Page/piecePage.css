@@ -1,0 +1,40 @@
+.fullPiecePage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+.pageContent {
+    display: flex;
+
+}
+
+.pieceDetails {
+    outline: auto;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 5vw;
+    padding-top: 0;
+    width: 45vw;
+
+}
+
+.piecePageImage {
+    width: 34vw;
+    height: 45vw;
+
+    margin-left: 7vw;
+}
+
+.pieceTitle {
+    font-size: 3.5vw;
+}
+
+.pieceText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 1.5vw;
+}

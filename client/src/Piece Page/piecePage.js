@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import PageHeader from "../pageHeader/pageHeader";
 
+import "../Piece Page/piecePage.css"
+
 function PiecePage({ user, donatePiece }) {
 
     const history = useHistory();
@@ -17,7 +19,7 @@ function PiecePage({ user, donatePiece }) {
             if (r.ok) {
                 r.json().then((r) => {
                     setTargetPiece(r)
-                    setPageImage(<img className="pieceImage" src={r.clothing_image.url}/>)
+                    setPageImage(<img className="piecePageImage" src={r.clothing_image.url}/>)
                 });
             } else {
                 r.json().then((error) => alert(error.errors))
@@ -39,16 +41,23 @@ function PiecePage({ user, donatePiece }) {
     return (
         <React.Fragment>
             <PageHeader user={user} />
-            <h1>{targetPiece.name}</h1>
-            <ul>
-                <li>Clothing Type: {targetPiece.piece_type}</li>
-                <li>Should be worn on {targetPiece.weather} days.</li>
-                <li>Can be worn to {targetPiece.formality} occasions.</li>
-                <li>{targetPiece.color} is this piece's dominant shade.</li>
-                <li>{cleanStatus ? "Ready to wear!" : "In your laundry bin."}</li>
-            </ul>
-            {pageImage}
-            <button onClick={handleDelete}>Remove from Wardrobe</button>
+            <div className="fullPiecePage">
+                <div className="pageContent">
+                    {pageImage}
+                    <div className="pieceDetails">
+                        <h1 className="pieceTitle">{targetPiece.name}</h1>
+                            <div className="pieceText">
+                                <p>Clothing Type: {targetPiece.piece_type}</p>
+                                <p>Should be worn on {targetPiece.weather} days.</p>
+                                <p>Can be worn to {targetPiece.formapty} occasions.</p>
+                                <p>{targetPiece.color} is this piece's dominant shade.</p>
+                                <p>{cleanStatus ? "Ready to wear!" : "In your laundry bin."}</p>
+                            </div>
+                    </div>
+                </div>
+                
+                <button onClick={handleDelete}>Remove from Wardrobe</button>
+            </div>
         </React.Fragment>
     )
 }
