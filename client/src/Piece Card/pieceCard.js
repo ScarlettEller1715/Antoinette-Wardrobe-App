@@ -34,7 +34,6 @@ function PieceCard({ piece, laundryUpdate }) {
         <React.Fragment>
             <div className="pieceCard">
                 <img className="pieceImage" src={piece.clothing_image.url}/>
-                {/* <h3>{piece.name}</h3> */}
                 <Link className="detailLink"
                         to={{
                             pathname: "/piecepage", 
