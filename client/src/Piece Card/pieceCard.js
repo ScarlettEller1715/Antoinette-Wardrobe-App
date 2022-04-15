@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import './pieceCard.css'
+import laundryIcon from '../img/external-laundry-basket-laundry-konkapp-detailed-outline-konkapp.png'
 
 function PieceCard({ piece, laundryUpdate }) {
 
     const [updatedClean, setUpdatedClean] = useState(!piece.clean);
+
+    const cleanStatus = piece.clean
 
     function handleLaundry() {
         fetch(`/laundry/${piece.id}`, {
@@ -38,7 +41,8 @@ function PieceCard({ piece, laundryUpdate }) {
                         }}
                     >{piece.name}</Link>
                 <div className="cardButtons">
-                    <button onClick={handleLaundry}>Laundry</button>
+                    <p>{cleanStatus ? "Ready to wear!" : "In Laundry"}</p>
+                    <img src={laundryIcon} onClick={handleLaundry} className="laundryIcon"/>
                 </div>
             </div>
         </React.Fragment>

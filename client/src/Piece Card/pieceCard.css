@@ -16,6 +16,7 @@
     transform: scale(1.06);
     transition: all .1s;
     box-shadow: .4vw .4vw gold;
+
 }
 
 .pieceImage {
@@ -28,7 +29,7 @@
 
 .cardButtons {
     display: flex;
-    margin-top: 1.5vw;
+    margin-top: 1vw;
 
 }
 
@@ -39,11 +40,29 @@
     font-family: "Alata";
     font-size: 1.5vw;
     text-decoration: none;
+
+    padding-top: 1vw;
+
 }.detailLink:hover{
     text-decoration: underline;
 }
 
-
-.pieceCard button{
+.cardButtons p {
     display: flex;
+
+    color: grey;
+
+    padding-right: 1vw;
+
+    font-size: 1.2vw;
+    font-weight: bold;
+    /* font-family: "Alata"; */
+}
+
+.laundryIcon{
+    display: flex;
+    width: 3vw;
+    height: 3vw;
+}.laundryIcon:hover{
+    cursor: pointer;
 }
