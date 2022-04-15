@@ -10,25 +10,28 @@
 }
 
 .pieceDetails {
-    outline: auto;
     display: flex;
     flex-direction: column;
 
-    margin-left: 5vw;
+    margin-left: 3vw;
     padding-top: 0;
     width: 45vw;
 
 }
 
 .piecePageImage {
-    width: 34vw;
+    width: 39vw;
     height: 45vw;
 
     margin-left: 7vw;
+
+    outline: solid black;
+    box-shadow: .4vw .4vw grey;
 }
 
 .pieceTitle {
     font-size: 3.5vw;
+    font-family: "Alata";
 }
 
 .pieceText {
@@ -36,5 +39,50 @@
     flex-direction: column;
     align-items: flex-start;
 
+    padding-top: .5vw;
+    padding-left: 5.5vw;
+
+    font-size: 1.3vw;
+    font-weight: 300;
+}
+
+.buttonsContainer {
+    margin-top: 1.5vw;
+}
+
+.deleteButton {
+    height: 3vw;
+    width: 10vw;
+    border: .25vw solid black;
+    padding: .5vw .5vw .5vw .5vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    font-size: .9vw;
+    font-weight: bold;
+    font-family: "Alata";
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+}.deleteButton:hover{
+    background-color: silver;
+
+    text-decoration: underline;
+    transform: translate3d(-0vw, -.2vw, 0px);
+    transition: all .3s;
+}
+
+.returnLink {
+    margin-top: 3vw;
     font-size: 1.5vw;
+    font-weight: bold;
+    font-family: "Alata";
+    color: black;
+}.returnLink:hover {
+    color: grey;
+    transform: translate3d(-.4vw, 0vw, 0px);
+    transition: all .3s;
 }
