@@ -101,8 +101,8 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                     <option value="">See Full Wardrobe</option>
                     <option value="true">See Clean Clothes Only</option>
                 </select> : null}
+                <Link to="/createpiece" className="createButton">Add New Item</Link>
             </div>
-            <Link to="/createpiece">Add a new piece!</Link>
             {renderedWardrobe}
         </React.Fragment>
     )
