@@ -1,3 +1,10 @@
+.fullClothesDisplay {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .filters {
     display: flex;
     justify-content: center;
@@ -62,9 +69,10 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin: 0%;
+    margin-right: 0%;
+    padding-right: 0%;
 
     width: 90vw;
 }

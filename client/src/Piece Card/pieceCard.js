@@ -29,15 +29,15 @@ function PieceCard({ piece, laundryUpdate }) {
     return (
         <React.Fragment>
             <div className="pieceCard">
-                <h3>{piece.name}</h3>
                 <img className="pieceImage" src={piece.clothing_image.url}/>
-                <div className="cardButtons">
-                    <Link className="detailLink"
+                {/* <h3>{piece.name}</h3> */}
+                <Link className="detailLink"
                         to={{
                             pathname: "/piecepage", 
                             state: { id: piece.id }
                         }}
-                    >Details</Link>
+                    >{piece.name}</Link>
+                <div className="cardButtons">
                     <button onClick={handleLaundry}>Laundry</button>
                 </div>
             </div>

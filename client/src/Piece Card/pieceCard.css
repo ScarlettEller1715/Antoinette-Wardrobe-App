@@ -6,24 +6,15 @@
     
     outline: auto;
 
-    width: 25vw;
-    height: 30vw;
+    width: 20vw;
+    height: 25vw;
     margin: 1vw;
 }
 
 .pieceImage {
     display: flex;
-    height: 20vw;
-    width: 16vw;
-}
-
-.pieceCard h3{
-    display: flex;
-    font-size: 1.5vw;
-
-    margin-top: 0vw;
-
-    font-family: "Alata";
+    height: 16vw;
+    width: 13vw;
 }
 
 .cardButtons {
@@ -33,24 +24,14 @@
 }
 
 .detailLink {
-    height: 2vw;
-    width: 5vw;
-    border: .15vw solid black;
-    padding: .2vw .2vw .2vw .2vw; 
-    margin-right: 4vw;
-
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
 
-    font-size: 1vw;
-    font-weight: bold;
-    font-family: "Alata";
-    text-decoration: none;
     color: black;
-
-    cursor: pointer;
+    font-family: "Alata";
+    font-size: 1.5vw;
+    text-decoration: none;
+}.detailLink:hover{
+    text-decoration: underline;
 }
 
 
