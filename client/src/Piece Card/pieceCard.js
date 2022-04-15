@@ -31,13 +31,15 @@ function PieceCard({ piece, laundryUpdate }) {
             <div className="pieceCard">
                 <h3>{piece.name}</h3>
                 <img className="pieceImage" src={piece.clothing_image.url}/>
-                <p>Wear on {piece.weather.toLowerCase()} days</p>
-                <Link to={{
-                    pathname: "/piecepage", 
-                    state: { id: piece.id }
-                }}
-                >See details</Link>
-                <button onClick={handleLaundry}>Laundry</button>
+                <div className="cardButtons">
+                    <Link className="detailLink"
+                        to={{
+                            pathname: "/piecepage", 
+                            state: { id: piece.id }
+                        }}
+                    >Details</Link>
+                    <button onClick={handleLaundry}>Laundry</button>
+                </div>
             </div>
         </React.Fragment>
     )

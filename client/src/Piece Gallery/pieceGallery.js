@@ -103,7 +103,9 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                 </select> : null}
                 <Link to="/createpiece" className="createButton">Add New Item</Link>
             </div>
-            {renderedWardrobe}
+            <div className="gallery">
+                {renderedWardrobe}
+            </div>
         </React.Fragment>
     )
 }
