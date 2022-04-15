@@ -4,17 +4,26 @@
     align-items: center;
     flex-direction: column;
     
-    outline: auto;
+    outline: solid silver;
 
     width: 20vw;
     height: 25vw;
     margin: 1vw;
+}.pieceCard:hover {
+    outline: solid black;
+
+    transform: translate3d(-.1vw, -.3vw, 0px);
+    transform: scale(1.06);
+    transition: all .1s;
+    box-shadow: .4vw .4vw gold;
 }
 
 .pieceImage {
     display: flex;
     height: 16vw;
     width: 13vw;
+
+    outline: solid silver;
 }
 
 .cardButtons {
