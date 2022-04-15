@@ -76,7 +76,7 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                         <option value="Hot">For a Hot Day</option>
                     </select>
                     <select onChange={(e) => setPiece_TypeFilter(e.target.value)}>
-                        <option value="">Any Piece of Clothing</option>
+                        <option value="">Any Clothing</option>
                         <option value="Top">Tops Only</option>
                         <option value="Bottom">Bottoms Only</option>
                         <option value="Outerwear">Outerwear Only</option>
