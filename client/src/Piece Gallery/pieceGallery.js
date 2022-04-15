@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PieceCard from "../Piece Card/pieceCard";
 
+import "../Piece Gallery/pieceGallery.css"
+
 function PieceGallery({ clothes, laundryUpdate, page }) {
 
     const [formalityFilter, setFormalityFilter] = useState("")
@@ -58,7 +60,8 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
     return (
         <React.Fragment>
             <div className="filters">
-                <select onChange={(e) => setFormalityFilter(e.target.value)}>
+                <p>I need an outfit...</p>
+                <select className="selectbox" onChange={(e) => setFormalityFilter(e.target.value)}>
                     <option value="">For Any Occasion</option>
                     <option value="Formal">Formal Pieces</option>
                     <option value="Business">Business Pieces</option>
@@ -72,14 +75,14 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                     <option value="Hot">For a Hot Day</option>
                 </select>
                 <select onChange={(e) => setPiece_TypeFilter(e.target.value)}>
-                    <option value="">Any Type of Clothing</option>
+                    <option value="">Any Piece of Clothing</option>
                     <option value="Top">Tops Only</option>
                     <option value="Bottom">Bottoms Only</option>
                     <option value="Outerwear">Outerwear Only</option>
                     <option value="Footwear">Footwear Only</option>
                 </select>
                 <select onChange={(e) => setColorFilter(e.target.value)}>
-                    <option value="">Any Color</option>
+                    <option value="">In Any Color</option>
                     <option value="White">White</option>
                     <option value="Beige">Beige</option>
                     <option value="Grey">Grey</option>
@@ -98,8 +101,8 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                     <option value="">See Full Wardrobe</option>
                     <option value="true">See Clean Clothes Only</option>
                 </select> : null}
+                <Link to="/createpiece" className="createButton">Add New Item</Link>
             </div>
-            <Link to="/createpiece">Add a new piece!</Link>
             {renderedWardrobe}
         </React.Fragment>
     )

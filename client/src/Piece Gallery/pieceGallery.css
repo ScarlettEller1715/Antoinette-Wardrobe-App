@@ -1,0 +1,62 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    
+}
+
+.filters p{
+    padding-right: 1vw;
+    font-family: "Alata";
+    font-size: 1.8vw;
+    margin-bottom: 0;
+    margin-top: 0.1vw;
+}
+
+.filters select{
+    height: 3vw;
+    width: 12vw;
+    border: .15vw solid black;
+    padding: .5vw 1.5vw .5vw .5vw; 
+    display: flex;
+    background-color: white;
+    margin-left: .1vw;
+    margin-right: .1vw;
+
+    font-size: .9vw;
+    font-weight: bold;
+
+    cursor: pointer;
+    appearance: none;
+}.filters select:hover{
+    border: .2vw solid black;
+    transition: all .2s;
+}
+
+.createButton {
+    height: 2.5vw;
+    width: 11.7vw;
+    border: .25vw solid black;
+    padding: .5vw 1.5vw .5vw .5vw; 
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: "Alata";
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+    appearance: none;
+}.createButton:hover{
+    background-color: gold;
+
+    text-decoration: underline;
+    transform: translate3d(-0vw, -.3vw, 0px);
+    transition: all .3s;
+}
