@@ -28,7 +28,6 @@
     font-weight: bold;
 
     cursor: pointer;
-    appearance: none;
 }.filters select:hover{
     border: .2vw solid black;
     transition: all .2s;
