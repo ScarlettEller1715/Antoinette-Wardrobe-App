@@ -21,15 +21,17 @@
 
 .pieceImage {
     display: flex;
-    height: 16vw;
-    width: 13vw;
+    height: 17vw;
+    width: 14vw;
+
+    margin-top: 1vw;
 
     outline: solid silver;
 }
 
 .cardButtons {
     display: flex;
-    margin-top: 1vw;
+    margin-top: .5vw;
 
 }
 
@@ -42,7 +44,6 @@
     text-decoration: none;
 
     padding-top: 1vw;
-
 }.detailLink:hover{
     text-decoration: underline;
 }
@@ -52,17 +53,19 @@
 
     color: grey;
 
-    padding-right: 1vw;
+    padding-right: 1.5vw;
 
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-weight: bold;
-    /* font-family: "Alata"; */
 }
 
 .laundryIcon{
     display: flex;
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    padding-top: .3vw;
 }.laundryIcon:hover{
     cursor: pointer;
+    transform: scale(1.2);
+    transition: all .1s;
 }
