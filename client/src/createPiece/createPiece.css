@@ -1,0 +1,34 @@
+.fullAddPage {
+    display: flex;
+
+
+    margin-top: 2vw;
+}
+
+.addPieceImage {
+    display: flex;
+    width: 35vw;
+    height: 40vw;
+
+    margin-left: 6.5vw;
+    outline: solid black;
+    box-shadow: .4vw .4vw gold;
+
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    outline: auto;
+
+    margin-left: 3vw;
+    padding-left: 1vw;
+
+}
+
+.formTitle {
+    display: flex;
+
+    font-size: 3vw;
+    font-family: "Alata";
+}
