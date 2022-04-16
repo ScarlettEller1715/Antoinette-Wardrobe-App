@@ -1,0 +1,99 @@
+.fullAddPage {
+    display: flex;
+    justify-content: center;
+    margin-right: 4vw;
+
+
+    margin-top: 2vw;
+}
+
+.addPieceImage {
+    display: flex;
+    width: 37vw;
+    height: 42vw;
+    margin-top: 3.5vw;
+
+    outline: solid black;
+    box-shadow: .4vw .4vw gold;
+
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-left: 3vw;
+
+    width: 45vw;
+
+    background-color: white;
+
+}
+
+.formTitle {
+    display: flex;
+
+    font-size: 2.6vw;
+    font-family: "Alata";
+    margin-bottom: .3vw;
+}
+
+.formContent {
+    display: flex;
+    font-size: 1.5vw;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 1vw;
+}.inputField select {
+    display: flex;
+    height: 2.5vw;
+    width: 11vw;
+    border: .15vw solid black;
+    padding: .5vw 1.5vw .5vw .5vw; 
+    background-color: white;
+    margin-left: .1vw;
+    margin-right: .1vw;
+
+    font-size: .9vw;
+    font-weight: bold;
+    font-family: "Lora";
+
+    cursor: pointer;
+}
+.inputField input {
+    height: 2vw;
+    width: 20vw;
+    font-family: "Lora";
+}
+
+.addButton {
+    height: 4vw;
+    width: 15vw;
+    border: .25vw solid black;
+    padding: .5vw .5vw .5vw .5vw; 
+    background-color: white;
+    margin-top: 2.5vw;
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: "Alata";
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+}.addButton:hover{
+    background-color: gold;
+
+    text-decoration: underline;
+    transition: all .3s;
+}
