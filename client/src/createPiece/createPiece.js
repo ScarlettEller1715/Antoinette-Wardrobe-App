@@ -121,7 +121,7 @@ function CreatePiece({ user, addNewPiece }) {
                                     <option value="Red">Red</option>
                                 </select>
                             </div>
-                            <button type="submit">Add to Wardrobe!</button>
+                            <button type="submit" className="addButton">Add to Wardrobe!</button>
                         </form>
                     </div>
                 </div>
