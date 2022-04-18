@@ -1,0 +1,35 @@
+
+
+.loginPage {
+    display: flex;
+    justify-content: center;
+
+
+     margin-top: 4vw;
+}
+
+.fullLogin {
+    display: flex;
+    justify-content: center;
+
+    outline: solid .3vw black;
+    box-shadow: .6vw .6vw gold;
+
+    width: 70vw;
+
+
+}
+
+.loginImage {
+    width: 35vw;
+
+    
+}
+
+.loginForm {
+
+    display: flex;
+    flex-direction: column;
+
+    width: 35vw;
+}
