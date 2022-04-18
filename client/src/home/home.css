@@ -1,0 +1,62 @@
+.fullHomepage {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+}
+
+.fullHomepage h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: "Alata";
+    font-size: 4vw;
+
+    width: 50vw;
+    padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+    margin-bottom: 1vw;
+   
+    
+    background-color: black;
+    box-shadow: .4vw .4vw silver;
+}
+
+.homepageText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 2vw;
+    
+
+}
+
+.homepageTextBox {
+
+    width: 50vw;
+}
+
+.homepageTextBox h2{
+    font-size: 3vw;
+    font-style: italic;
+    margin-bottom: 2.5vw;
+    color: grey;
+}
+
+.homepageTextBox p{
+    font-size: 1.8vw;
+    font-weight: bold;
+    letter-spacing: .05vw;
+    line-height: 2vw;
+}
+
+.fullHomepage img {
+    width: 35vw;
+    height: 45vw;
+    margin-right: 2vw;
+
+    box-shadow: .4vw .4vw gold;
+}
