@@ -1,11 +1,9 @@
-
-
 .loginPage {
     display: flex;
     justify-content: center;
 
-
-     margin-top: 4vw;
+    margin-top: 3vw;
+ 
 }
 
 .fullLogin {
@@ -14,8 +12,10 @@
 
     outline: solid .3vw black;
     box-shadow: .6vw .6vw gold;
+    background-color: white;
 
     width: 70vw;
+    /* height: 27vw; */
 
 
 }
@@ -33,3 +33,78 @@
 
     width: 35vw;
 }
+
+.loginForm h1 {
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+
+.loginForm h2 {
+    font-size: 2vw;
+
+}
+
+.loginInputField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.loginForm button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 3vw;
+    width: 10vw;
+    border: .15vw solid black;
+    padding: .5vw .5vw .5vw .5vw; 
+    margin-bottom: .8vw;
+    background-color: white;
+    font-size: 1.3vw;
+    font-weight: bold;
+    font-family: "Alata";
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+}.loginForm button:hover {
+    background-color: gold;
+    border: .2vw solid black;
+
+    text-decoration: underline;
+    transition: all .2s;
+}
+
+.loginButton {
+    display: flex;
+    justify-content: center;
+}
+
+.loginField {
+    width: 22vw;
+    height: 1.7vw;
+
+    margin-bottom: 1.5vw;
+
+    font-size: 1.5vw;
+}
+
+.loginFooter{
+    font-size: 1.3vw;
+}
+
+.loginCreateLink {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}.loginCreateLink:hover {
+    text-decoration: underline;
+}
+

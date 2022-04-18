@@ -40,23 +40,30 @@ function Login({ setUser, setWardrobe }) {
                     <div className="loginForm">
                         <h1>Welcome back darling...</h1>
                         <h2>User Login</h2>
-                        <form onSubmit={handleSubmit}>
-                            <input type="text"
-                            placeholder="Username"
-                            id="username"
-                            autoComplete="off"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                            />
-                            <input type="password"
-                            placeholder="Password"
-                            id="password"
-                            autoComplete="off"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)} />
-                            <button type="submit">Login</button>
-                        </form>
-                        <p>Never utilized our services? <Link to="/createaccount">Create an account.</Link></p>
+                        <div className="loginInputField">
+                            <form onSubmit={handleSubmit}>
+                                <input type="text"
+                                placeholder="Username"
+                                id="username"
+                                autoComplete="off"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                className="loginField"
+                                />
+                                <input type="password"
+                                placeholder="Password"
+                                id="password"
+                                autoComplete="off"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)} 
+                                className="loginField"
+                                />
+                                <div className="loginButton">
+                                    <button type="submit">Login</button>
+                                </div>
+                            </form>
+                            <p className="loginFooter">Never utilized our services? <Link to="/createaccount" className="loginCreateLink">Create an account.</Link></p>
+                        </div>
                     </div>
                 </div>
             </div>
