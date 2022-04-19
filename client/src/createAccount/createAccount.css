@@ -1,0 +1,85 @@
+.createPageExteriorDiv {
+    display: flex;
+    justify-content: center;
+
+}
+
+.fullCreatePage {
+    margin-top: 3vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90vw;
+    height: 30vw;
+    outline: auto;
+
+    outline: solid .3vw black;
+    box-shadow: .6vw .6vw gold;
+    background-color: white;
+}
+
+.createPageImage {
+    height: 30vw;
+    width: 45vw;
+}
+
+.createPageTextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 30vw;
+    width: 45vw;
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.createPageTitle {
+    font-size: 3vw;
+}
+
+.createForm input {
+    width: 30vw;
+    height: 1.7vw;
+
+    margin-bottom: 1.5vw;
+
+    font-size: 1.5vw;
+}
+
+.createAccButtonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.createAccButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 3vw;
+    width: 12vw;
+    border: .15vw solid black;
+    padding: .5vw .5vw .5vw .5vw; 
+    margin-bottom: .8vw;
+    background-color: white;
+    font-size: 1.3vw;
+    font-weight: bold;
+    font-family: "Alata";
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+}.createAccButton:hover{
+    background-color: gold;
+    border: .2vw solid black;
+
+    text-decoration: underline;
+    transform: translate3d(0vw, -.3vw, 0px);
+    transition: all .2s;
+}
