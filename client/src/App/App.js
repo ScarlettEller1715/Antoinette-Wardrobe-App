@@ -10,7 +10,6 @@ import Wardrobe from "../Wardrobe/Wardrobe";
 import Laundry from "../Laundry/laundry";
 import PiecePage from "../Piece Page/piecePage";
 import LogoutWardrobe from "../LogoutWardrobe/logoutWardrobe";
-import LogoutLaundry from "../LogoutLaundry/logoutLaundry";
 import CreatePiece from "../createPiece/createPiece";
 
 
@@ -87,7 +86,7 @@ function App() {
           </Route>
 
           <Route path="/laundry">
-          {user ? <Laundry user={user} clothes={laundryOnly} laundryUpdate={laundryUpdate}/> : <LogoutLaundry user = {user}/>}
+          <Laundry user={user} clothes={laundryOnly} laundryUpdate={laundryUpdate}/>
           </Route>
 
           <Route path="/piecepage">
