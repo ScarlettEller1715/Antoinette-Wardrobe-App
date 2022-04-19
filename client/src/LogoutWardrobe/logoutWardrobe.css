@@ -11,6 +11,9 @@
     width: 32vw;
 
     margin-right: 2vw;
+}.logoutWardrobeImage:hover {
+    transform: scale(1.06);
+    transition: all .3s;
 }
 
 .logoutWardrobeTextbox {
