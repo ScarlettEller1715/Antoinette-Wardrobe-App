@@ -1,0 +1,39 @@
+.fullAccountPage {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2vw;
+}
+
+.accountTextBox {
+    outline: auto;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 37vw;
+    width: 40vw;
+
+    margin-left: 3vw;
+}
+
+.accountTextBox h1 {
+    font-weight: bold;
+    font-size: 2.5vw;
+    font-family: "Alata";
+}
+
+.accountTextBox p {
+    color: red;
+}
+
+.accountImage {
+    width: 30vw;
+    height: 37vw;
+
+    margin-right: 3vw;
+
+    outline: .3vw solid black;
+    box-shadow: .6vw .6vw gold;
+}
