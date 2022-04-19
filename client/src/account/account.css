@@ -1,0 +1,72 @@
+.fullAccountPage {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.accountTextBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 37vw;
+    width: 40vw;
+
+    margin-left: 3vw;
+}
+
+.accountTextBox h1 {
+    font-weight: bold;
+    font-size: 2.8vw;
+    font-family: "Alata";
+
+    margin-bottom: 2vw;
+}
+
+.accountDetails {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.5vw;
+    letter-spacing: .03vw;
+
+    margin-bottom: 2vw;
+}
+
+.logoutButton {
+    height: 3.2vw;
+    width: 10vw;
+    border: .25vw solid black;
+    padding: .5vw .5vw .5vw .5vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: "Alata";
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+}.logoutButton:hover {
+    background-color: silver;
+
+    text-decoration: underline;
+    transform: translate3d(-0vw, -.3vw, 0px);
+    transition: all .3s;
+}
+
+.accountImage {
+    width: 30vw;
+    height: 37vw;
+
+    margin-right: 3vw;
+
+    outline: .3vw solid black;
+    box-shadow: .6vw .6vw gold;
+}
