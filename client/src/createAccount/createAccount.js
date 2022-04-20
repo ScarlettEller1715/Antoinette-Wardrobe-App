@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import "../createAccount/createAccount.css"
+import createAccountImage from "../img/CreateAccount.jpg"
+
 function CreateAccount({ setUser }) {
     
     const [username, setUsername] = useState("");
@@ -32,46 +35,54 @@ function CreateAccount({ setUser }) {
     
     return (
         <React.Fragment>
-            <h1>Join the party</h1>
-            <p>description paragraph to go here.</p>
-            <form onSubmit={handleSignUp}>
-                <input  placeholder="Your name"
-                        type="text"
-                        id="name"
-                        autoComplete="off"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                />
-                <input placeholder="Your desired username"
-                    type="text"
-                    id="username"
-                    autoComplete="off"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input placeholder="Your password"
-                    type="password"
-                    id="password"
-                    autoComplete="off"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <input placeholder="Password confirmation"
-                    type="password"
-                    id="password_confirmation"
-                    autoComplete="off"
-                    value={passwordConfirmation}
-                    onChange={(e) => setPasswordConfirmation(e.target.value)}
-                />
-                <input placeholder="Your Email" 
-                    type="text"
-                    id="username"
-                    autoComplete="off"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <button type="submit">Join us!</button>
-            </form>
+            <div className="createPageExteriorDiv">
+                <div className="fullCreatePage">
+                    <img src={createAccountImage} className="createPageImage"/>
+                    <div className="createPageTextBox">
+                        <h1 className="createPageTitle">- Join the Jubilee! -</h1>
+                        <form onSubmit={handleSignUp} className="createForm">
+                            <input  placeholder="Your name"
+                                    type="text"
+                                    id="name"
+                                    autoComplete="off"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                            />
+                            <input placeholder="Your desired username"
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                            />
+                            <input placeholder="Your password"
+                                type="password"
+                                id="password"
+                                autoComplete="off"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <input placeholder="Password confirmation"
+                                type="password"
+                                id="password_confirmation"
+                                autoComplete="off"
+                                value={passwordConfirmation}
+                                onChange={(e) => setPasswordConfirmation(e.target.value)}
+                            />
+                            <input placeholder="Your Email" 
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <div className="createAccButtonDiv">
+                                <button type="submit" className="createAccButton">Create Account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </React.Fragment>
     )
 }
