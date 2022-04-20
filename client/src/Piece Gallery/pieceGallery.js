@@ -13,47 +13,19 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
     const [laundryFilter, setLaundryFilter] = useState("")
 
 
-    const formalFilter = clothes.filter((piece) => {
-        if (formalityFilter === "") {
-            return true
-        } else {
-            return piece.formality === formalityFilter || piece.formality === "Any"
-        }
-    }) 
-
-    const tempFilter = formalFilter.filter((piece) => {
-        if (weatherFilter === "") {
-            return true
-        } else {
-            return piece.weather === weatherFilter || piece.weather === "Any"
-        }
-    })
-
-    const typeFilter = tempFilter.filter((piece) => {
-        if (piece_typeFilter === "") {
-            return true
-        } else {
-            return piece.piece_type === piece_typeFilter
-        }
-    })
-
-    const shadeFilter = typeFilter.filter((piece) => {
-        if (colorFilter === "") {
-            return true
-        } else {
-            return piece.color === colorFilter
-        }
-    })
-
-    const cleanFilter = shadeFilter.filter((piece) => {
-        if (laundryFilter === "") {
-            return true
-        } else {
-            return piece.clean === true
-        }
-    })
+    const filteredClothes = clothes.filter(piece => 
+        piece.formality === formalityFilter || piece.formality === "Any" || formalityFilter === ""
+        ).filter(piece => 
+            piece.weather === weatherFilter || piece.weather === "Any" || weatherFilter === ""
+        ).filter(piece => 
+            piece.piece_type === piece_typeFilter || piece_typeFilter === ""
+        ).filter(piece => 
+            piece.color === colorFilter || colorFilter === ""
+        ).filter(piece => 
+            piece.clean === true || laundryFilter === ""
+        )
     
-    const renderedWardrobe = cleanFilter.map((piece) => {
+    const renderedWardrobe = filteredClothes.map((piece) => {
         return <PieceCard piece={piece} laundryUpdate={laundryUpdate}/>
     })
 
