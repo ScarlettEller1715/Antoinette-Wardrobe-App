@@ -40,8 +40,7 @@
 }
 
 .createPageTitle {
-    font-size: 3vw;
-}
+    font-size: 3vw;}
 
 .createForm input {
     width: 30vw;
@@ -50,6 +49,7 @@
     margin-bottom: 1.5vw;
 
     font-size: 1.5vw;
+    
 }
 
 .createAccButtonDiv {

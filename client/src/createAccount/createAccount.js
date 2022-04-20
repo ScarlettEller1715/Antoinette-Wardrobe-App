@@ -39,7 +39,7 @@ function CreateAccount({ setUser }) {
                 <div className="fullCreatePage">
                     <img src={createAccountImage} className="createPageImage"/>
                     <div className="createPageTextBox">
-                        <h1 className="createPageTitle">Join the Jubilee!</h1>
+                        <h1 className="createPageTitle">- Join the Jubilee! -</h1>
                         <form onSubmit={handleSignUp} className="createForm">
                             <input  placeholder="Your name"
                                     type="text"
