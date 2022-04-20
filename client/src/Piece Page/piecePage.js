@@ -13,6 +13,8 @@ function PiecePage({ user, donatePiece }) {
 
     const [targetPiece, setTargetPiece] = useState([])
     const [pageImage, setPageImage] = useState("")
+    const [pageWeather, setPageWeather] = useState("")
+    const [pageFormality, setPageFormality] = useState("")
 
     useEffect(() => {
         fetch(`/piecedetails/${pieceId.id}`).then((r) => {
@@ -20,14 +22,30 @@ function PiecePage({ user, donatePiece }) {
                 r.json().then((r) => {
                     setTargetPiece(r)
                     setPageImage(<img className="piecePageImage" src={r.clothing_image.url}/>)
+                    setPageWeather(r.weather.toLowerCase())
+                    setPageFormality(r.formality.toLowerCase())
                 });
             } else {
                 r.json().then((error) => alert(error.errors))
             }
         });
     }, []);
-    
-    const cleanStatus = targetPiece.clean
+
+    function determineWeather() {
+        if (pageWeather === "any") {
+            return <p>Can be worn in any weather.</p>
+        } else {
+            return <p>Should be worn in {pageWeather} weather.</p>
+        }
+    }
+
+    function determineFormality() {
+        if (pageFormality === "any") {
+            return <p>Can be worn to any occasion.</p>
+        } else {
+            return <p>Should be worn to {pageFormality} affairs.</p>
+        }
+    }
 
     function handleDelete() {
         fetch(`/donate/${targetPiece.id}`, {
@@ -38,6 +56,8 @@ function PiecePage({ user, donatePiece }) {
         })
     }
 
+    const cleanStatus = targetPiece.clean
+
     return (
         <React.Fragment>
             <PageHeader user={user} />
@@ -47,9 +67,9 @@ function PiecePage({ user, donatePiece }) {
                     <div className="pieceDetails">
                         <h1 className="pieceTitle">{targetPiece.name}</h1>
                             <div className="pieceText">
-                                <p>Should be worn on {targetPiece.weather} days.</p>
-                                <p>Can be worn to {targetPiece.formality} occasions.</p>
-                                <p>{targetPiece.color} is this piece's dominant shade.</p>
+                                {determineWeather()}
+                                {determineFormality()}
+                                <p>{targetPiece.color} is the dominant shade of this piece.</p>
                                 <p>{cleanStatus ? "Ready to wear!" : "In your laundry bin."}</p>
                                 <div className="buttonsContainer">
                                     <button onClick={handleDelete} className="deleteButton">Remove from Wardrobe</button>

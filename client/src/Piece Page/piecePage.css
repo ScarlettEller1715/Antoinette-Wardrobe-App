@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 3vw;
+    margin-bottom: 1vw;
 }
 
 .pageContent {
@@ -32,6 +33,7 @@
 .pieceTitle {
     font-size: 3.5vw;
     font-family: "Alata";
+    margin-bottom: 1.5vw;
 }
 
 .pieceText {
@@ -39,11 +41,11 @@
     flex-direction: column;
     align-items: flex-start;
 
-    padding-top: .5vw;
     padding-left: 5.5vw;
 
-    font-size: 1.3vw;
-    font-weight: 300;
+    font-size: 1.4vw;
+    font-weight: bold;
+    letter-spacing: .02vw;
 }
 
 .buttonsContainer {
@@ -76,7 +78,7 @@
 }
 
 .returnLink {
-    margin-top: 3vw;
+    margin-top: 2.5vw;
     font-size: 1.5vw;
     font-weight: bold;
     font-family: "Alata";

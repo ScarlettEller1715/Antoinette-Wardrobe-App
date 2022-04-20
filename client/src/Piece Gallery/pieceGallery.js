@@ -13,47 +13,23 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
     const [laundryFilter, setLaundryFilter] = useState("")
 
 
-    const formalFilter = clothes.filter((piece) => {
-        if (formalityFilter === "") {
-            return true
-        } else {
-            return piece.formality === formalityFilter || piece.formality === "Any"
-        }
-    }) 
-
-    const tempFilter = formalFilter.filter((piece) => {
-        if (weatherFilter === "") {
-            return true
-        } else {
-            return piece.weather === weatherFilter || piece.weather === "Any"
-        }
-    })
-
-    const typeFilter = tempFilter.filter((piece) => {
-        if (piece_typeFilter === "") {
-            return true
-        } else {
-            return piece.piece_type === piece_typeFilter
-        }
-    })
-
-    const shadeFilter = typeFilter.filter((piece) => {
-        if (colorFilter === "") {
-            return true
-        } else {
-            return piece.color === colorFilter
-        }
-    })
-
-    const cleanFilter = shadeFilter.filter((piece) => {
-        if (laundryFilter === "") {
-            return true
-        } else {
-            return piece.clean === true
-        }
-    })
+    const filteredClothes = clothes.filter(piece => 
+        piece.formality === formalityFilter || piece.formality === "Any" || formalityFilter === ""
+        ).filter(piece => 
+            piece.weather === weatherFilter || piece.weather === "Any" || weatherFilter === ""
+        ).filter(piece => 
+            piece.piece_type === piece_typeFilter || piece_typeFilter === ""
+        ).filter(piece => 
+            piece.color === colorFilter || colorFilter === ""
+        ).filter(piece => 
+            piece.clean === true || laundryFilter === ""
+        ).sort(function(piece1, piece2) {
+            const date1 = new Date(piece1.created_at)
+            const date2 = new Date(piece2.created_at)
+            return date2 - date1
+        })
     
-    const renderedWardrobe = cleanFilter.map((piece) => {
+    const renderedWardrobe = filteredClothes.map((piece) => {
         return <PieceCard piece={piece} laundryUpdate={laundryUpdate}/>
     })
 
@@ -61,7 +37,7 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
         <React.Fragment>
             <div className="fullClothesDisplay">
                 <div className="filters">
-                    <p>I need an outfit...</p>
+                    {page ? <p>I need an outfit...</p> : <p>Sort your laundry:</p>}
                     <select className="selectbox" onChange={(e) => setFormalityFilter(e.target.value)}>
                         <option value="">For Any Occasion</option>
                         <option value="Formal">Formal Pieces</option>
@@ -102,7 +78,7 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                         <option value="">See Full Wardrobe</option>
                         <option value="true">See Clean Clothes Only</option>
                     </select> : null}
-                    <Link to="/createpiece" className="createButton">Add New Item</Link>
+                    {page ? <Link to="/createpiece" className="createButton">Add New Item</Link> : null}
                 </div>
                 <div className="gallery">
                     {renderedWardrobe}
