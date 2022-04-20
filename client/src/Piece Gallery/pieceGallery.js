@@ -33,7 +33,7 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
         <React.Fragment>
             <div className="fullClothesDisplay">
                 <div className="filters">
-                    <p>I need an outfit...</p>
+                    {page ? <p>I need an outfit...</p> : <p>Sort your laundry:</p>}
                     <select className="selectbox" onChange={(e) => setFormalityFilter(e.target.value)}>
                         <option value="">For Any Occasion</option>
                         <option value="Formal">Formal Pieces</option>
@@ -74,7 +74,7 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
                         <option value="">See Full Wardrobe</option>
                         <option value="true">See Clean Clothes Only</option>
                     </select> : null}
-                    <Link to="/createpiece" className="createButton">Add New Item</Link>
+                    {page ? <Link to="/createpiece" className="createButton">Add New Item</Link> : null}
                 </div>
                 <div className="gallery">
                     {renderedWardrobe}
