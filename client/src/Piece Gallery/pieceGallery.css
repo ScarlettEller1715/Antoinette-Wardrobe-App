@@ -8,8 +8,8 @@
 .filters {
     display: flex;
     justify-content: center;
-    padding-top: 2vw;
-    padding-bottom: 1vw;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
     
 }
 
@@ -31,7 +31,7 @@
     margin-left: .1vw;
     margin-right: .1vw;
 
-    font-size: .9vw;
+    font-size: 1vw;
     font-weight: bold;
 
     cursor: pointer;
