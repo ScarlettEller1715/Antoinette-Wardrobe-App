@@ -23,7 +23,11 @@ function PieceGallery({ clothes, laundryUpdate, page }) {
             piece.color === colorFilter || colorFilter === ""
         ).filter(piece => 
             piece.clean === true || laundryFilter === ""
-        )
+        ).sort(function(piece1, piece2) {
+            const date1 = new Date(piece1.created_at)
+            const date2 = new Date(piece2.created_at)
+            return date2 - date1
+        })
     
     const renderedWardrobe = filteredClothes.map((piece) => {
         return <PieceCard piece={piece} laundryUpdate={laundryUpdate}/>
