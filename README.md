@@ -8,10 +8,10 @@
 <p>HTML, Flexbox CSS, React.js, Ruby on Rails, Rails Active Storage</p>
 
 <h2>How to Run This Application -</h2>
-<li>
-  <ul>Install Ruby Gems with via the "Bundle Install" command</ul>
-  <ul>Install required NPM nodes with the command "npm install --prefix client"</ul>
-  <ul>In two seperate Linux windows, run the commands to start the server ("rails s") and the frontend app ("npm start --prefix client")</ul>
- </li>
+<ul>
+  <li>Install Ruby Gems with via the "Bundle Install" command</li>
+  <li>Install required NPM nodes with the command "npm install --prefix client"</li>
+  <li>In two seperate Linux windows, run the commands to start the server ("rails s") and the frontend app ("npm start --prefix client")</li>
+</ul>
  
  
