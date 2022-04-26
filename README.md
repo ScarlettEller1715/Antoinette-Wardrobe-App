@@ -2,7 +2,7 @@
 
 <p>Antoinette is a wardobe organizing application giving users a bird's eye view of their closet. By uploading personalized profiles of each piece they own, users
   can plan new outfits, notice ways to build out their collection, and find the clothes they never wear. This app makes it easy to dress for any weather or occasion.</p>
-<p>This application was orginially built as my Phase 5 Capstone Project at the Flatiron School Software Engineering Bootcamp</p>
+<p>This application was orginially built as my Phase 5 Capstone Project at the Flatiron School Software Engineering Bootcamp, though as a passion project I continue to update it from time to time.</p>
 
 <h2>Tech Used -</h2>
 <p>HTML, Flexbox CSS, React.js, Ruby on Rails, Rails Active Storage</p>
