@@ -1,6 +1,6 @@
-# <img src='Antoinette Wardrobe.PNG' width='700' align='center'>
+# <img src='Antoinette Wardrobe.PNG' width='700' align="center">
 
-<h1>Bienvenue à Antoinette - Reign Over Your Wardrobe</h1>
+<h1 align="center">Bienvenue à Antoinette - Reign Over Your Wardrobe</h1>
 
 <p>Antoinette is a wardobe organizing application giving users a bird's eye view of their closet. By uploading personalized profiles of each piece they own, users
   can plan new outfits, notice ways to build out their collection, and find the clothes they never wear. This app makes it easy to dress for any weather or occasion.</p>
