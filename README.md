@@ -1,4 +1,4 @@
-# <img src='Antoinette Wardrobe.PNG' width='500'>
+# <img src='Antoinette Wardrobe.PNG' width='700' align='center'>
 
 <h1>Bienvenue à Antoinette - Reign Over Your Wardrobe</h1>
 
