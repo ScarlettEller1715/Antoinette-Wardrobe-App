@@ -8,7 +8,7 @@
   can plan new outfits, notice ways to build out their collection, and find the clothes they never wear. This app makes it easy to dress for any weather or occasion.</p>
 <p>This application was orginally built as my Phase 5 Capstone Project at the Flatiron School Software Engineering Bootcamp, though as a passion project I continue to update it from time to time.</p>
 
-Full Youtube Demo - https://www.youtube.com/watch?v=Ku769gWmZH8
+Full Youtube Demo - https://www.youtube.com/watch?v=7RJcjQI0iow
 
 **Made With:** 
 
