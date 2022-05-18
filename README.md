@@ -42,3 +42,4 @@ npm start --prefix client
 
 Developed by: 
 * [Scarlett Eller](https://github.com/ScarlettEller1715) 
+* 
