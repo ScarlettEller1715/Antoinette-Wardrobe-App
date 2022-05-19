@@ -25,7 +25,7 @@
 ## Demo and Images
 [Watch the full video demo here!](https://www.youtube.com/watch?v=7RJcjQI0iow)
 
-<img src='AntoinetteImg1.PNG' align="center">
+<img src='AntoinetteImg1.PNG' align="center" width=70>
 
 ## How to Run This Application:
 * Install Ruby Gems with via the "Bundle Install" command
