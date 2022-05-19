@@ -24,9 +24,9 @@
 * Added bcrypt user authentication to facilitate account creation, securely pass sensitive information, set protected cookies allowing for persisting user login, and ` validate login status to access certain application features.
 * Employed Flexbox CSS to build a full UI from scratch, style React components and page elements. 
 
-<img src='AntoinetteImg2.PNG' align="center">
-
 [Watch the full video demo here!](https://www.youtube.com/watch?v=7RJcjQI0iow)
+
+<img src='AntoinetteImg2.PNG' align="center">
 
 <img src='AntoinetteImg3.PNG' align="center">
 
