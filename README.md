@@ -8,6 +8,7 @@
   can plan new outfits, notice ways to build out their collection, and find the clothes they never wear. This app makes it easy to dress for any weather or occasion.</p>
 <p>This application was orginally built as my Phase 5 Capstone Project at the Flatiron School Software Engineering Bootcamp, though as a passion project I continue to update it from time to time.</p>
 
+<img src='AntoinetteImg1.PNG' align="center">
 **Made With:** 
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
@@ -22,12 +23,9 @@
 * Added bcrypt user authentication to facilitate account creation, securely pass sensitive information, set protected cookies allowing for persisting user login, and ` validate login status to access certain application features.
 * Employed Flexbox CSS to build a full UI from scratch, style React components and page elements. 
 
-## Demo and Images
-[Watch the full video demo here!](https://www.youtube.com/watch?v=7RJcjQI0iow)
-
-<img src='AntoinetteImg1.PNG' align="center">
-
 <img src='AntoinetteImg2.PNG' align="center">
+
+[Watch the full video demo here!](https://www.youtube.com/watch?v=7RJcjQI0iow)
 
 <img src='AntoinetteImg3.PNG' align="center">
 
