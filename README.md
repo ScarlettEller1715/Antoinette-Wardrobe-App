@@ -22,8 +22,10 @@
 * Added bcrypt user authentication to facilitate account creation, securely pass sensitive information, set protected cookies allowing for persisting user login, and ` validate login status to access certain application features.
 * Employed Flexbox CSS to build a full UI from scratch, style React components and page elements. 
 
-## Youtube Demo
-https://www.youtube.com/watch?v=7RJcjQI0iow
+## Demo and Images
+[Watch the full video demo here!](https://www.youtube.com/watch?v=7RJcjQI0iow)
+
+<img src='AntoinetteImg1.PNG' align="center">
 
 ## How to Run This Application:
 * Install Ruby Gems with via the "Bundle Install" command
